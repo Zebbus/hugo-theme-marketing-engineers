@@ -1,4 +1,7 @@
-title = 'The Marketing Engineers'
-theme = 'marketing-engineers'  
-[params]
-  tagline = 'Partners in Data&Tech'
+baseURL = 'https://example.com/'
+languageCode = 'en-us'
+title = 'Example site'
+theme = 'zebbus-marketing-engineers'  
+[Params]
+  tagline = 'Example site'
+  recaptcha = 'xxx-xxx-xxx'

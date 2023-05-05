@@ -6,3 +6,7 @@
     {{ .Site.Title }}
     {{ end }}
 </title>
+
+{{ if .HasShortcode "contact-form" }}
+    {{ partial "head/recaptcha.html" . }}
+{{end}}
