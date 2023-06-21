@@ -1,7 +1,10 @@
 {{ define "main" }}
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 
   <main>
-      {{ range $index, $val := ( where .Site.RegularPages "Type" "posts" ) }}
+      {{ range $index, $val := $sections }}
       <div class="block">
 
       <div class="title" onclick="expandDiv({{$index}})">{{ .Title }}</div>
